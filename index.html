@@ -45,7 +45,7 @@
       <input id="searchInput" type="text" placeholder="Search match name or ID..." oninput="filterMatches()" class="w-full sm:w-64 px-3 py-1.5 bg-[#161b22] border border-[#30363d] rounded-lg text-xs text-white placeholder-gray-500 focus:outline-none focus:border-blue-500">
     </div>
 
-    <!-- Active Embedded Video Player (Optional preview inside page) -->
+    <!-- Active Embedded Video Player -->
     <div id="playerSection" class="hidden bg-[#161b22] border border-blue-500/50 rounded-xl p-3 space-y-2 shadow-xl">
       <div class="flex items-center justify-between">
         <span id="playingTitle" class="text-xs font-semibold text-white truncate">Live Stream Preview</span>
@@ -63,7 +63,7 @@
 
     <!-- Footer -->
     <footer class="pt-4 text-center text-xs text-gray-500 flex flex-col sm:flex-row items-center justify-between gap-2 border-t border-[#21262d]">
-      <span>Hosted on GitHub &bull; Auto-updating</span>
+      <span>Hosted on GitHub &bull; Auto-updating 24x7</span>
       <span id="lastUpdated" class="text-gray-400">Updated: Just now</span>
     </footer>
 
@@ -75,23 +75,21 @@
 
     async function loadStreams() {
       const spinner = document.getElementById('spinner');
-      spinner.classList.add('animate-spin');
+      if (spinner) spinner.classList.add('animate-spin');
 
       try {
-        // Try local streams.json first, fallback to API
-        let res = await fetch('./streams.json?t=' + Date.now()).catch(() => null);
-        if (!res || !res.ok) {
-          res = await fetch('/api/streams?t=' + Date.now());
-        }
+        const res = await fetch('streams.json?t=' + Date.now());
+        if (!res.ok) throw new Error('HTTP ' + res.status);
         const data = await res.json();
         allStreams = data.streams || [];
         document.getElementById('allCount').innerText = allStreams.length;
         document.getElementById('lastUpdated').innerText = 'Updated: ' + new Date(data.updatedAt || Date.now()).toLocaleTimeString();
         filterMatches();
       } catch (err) {
-        document.getElementById('matchesGrid').innerHTML = '<div class="col-span-full py-8 text-center text-red-400 text-xs">Failed to load live streams. Click refresh to retry.</div>';
+        console.error('Failed to load streams:', err);
+        document.getElementById('matchesGrid').innerHTML = '<div class="col-span-full py-8 text-center text-red-400 text-xs">Failed to load live streams (' + err.message + '). Click refresh to retry.</div>';
       } finally {
-        spinner.classList.remove('animate-spin');
+        if (spinner) spinner.classList.remove('animate-spin');
       }
     }
 
@@ -111,7 +109,7 @@
       const query = document.getElementById('searchInput').value.toLowerCase().trim();
       const filtered = allStreams.filter(m => {
         const matchesSport = (currentSport === 'ALL' || m.sport === currentSport);
-        const matchesQuery = !query || m.matchName.toLowerCase().includes(query) || m.matchId.includes(query) || m.competition.toLowerCase().includes(query);
+        const matchesQuery = !query || m.matchName.toLowerCase().includes(query) || String(m.matchId).includes(query) || m.competition.toLowerCase().includes(query);
         return matchesSport && matchesQuery;
       });
 
@@ -125,28 +123,30 @@
         return;
       }
 
-      container.innerHTML = list.map(m => \`
+      container.innerHTML = list.map(m => {
+        const safeTitle = m.matchName.replace(/"/g, '&quot;').replace(/'/g, "\\'");
+        return `
         <div class="bg-[#161b22] border border-[#30363d] hover:border-gray-600 rounded-xl p-3.5 flex flex-col justify-between gap-3 shadow transition">
           <div>
             <div class="flex items-center justify-between text-xs text-gray-400 mb-1.5">
-              <span class="font-medium">\${m.icon} \${m.sport} &bull; \${m.competition}</span>
-              <span class="font-mono px-2 py-0.5 rounded bg-[#21262d] text-gray-300 text-[11px]">ID: \${m.matchId}</span>
+              <span class="font-medium">${m.icon} ${m.sport} &bull; ${m.competition}</span>
+              <span class="font-mono px-2 py-0.5 rounded bg-[#21262d] text-gray-300 text-[11px]">ID: ${m.matchId}</span>
             </div>
-            <h2 class="text-sm font-semibold text-white leading-snug">\${m.matchName}</h2>
+            <h2 class="text-sm font-semibold text-white leading-snug">${m.matchName}</h2>
           </div>
           <div class="flex items-center gap-1.5 pt-2 border-t border-[#21262d]">
-            <a href="\${m.streamUrl}" target="_blank" rel="noopener noreferrer" class="flex-1 py-1.5 px-3 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold text-center transition flex items-center justify-center gap-1">
+            <a href="${m.streamUrl}" target="_blank" rel="noopener noreferrer" class="flex-1 py-1.5 px-3 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold text-center transition flex items-center justify-center gap-1">
               <span>▶ Open Stream</span>
             </a>
-            <button onclick="playInline('\${m.streamUrl}', '\${m.matchName.replace(/'/g, "\\\\'")}')" class="py-1.5 px-2.5 rounded-lg bg-[#21262d] hover:bg-[#30363d] text-blue-400 text-xs font-semibold transition" title="Preview inside this page">
+            <button onclick="playInline('${m.streamUrl}', '${safeTitle}')" class="py-1.5 px-2.5 rounded-lg bg-[#21262d] hover:bg-[#30363d] text-blue-400 text-xs font-semibold transition" title="Preview inside this page">
               📺 Preview
             </button>
-            <button onclick="copyUrl('\${m.streamUrl}', this)" class="py-1.5 px-2.5 rounded-lg bg-[#21262d] hover:bg-[#30363d] text-gray-300 hover:text-white text-xs font-semibold transition" title="Copy stream URL">
+            <button onclick="copyUrl('${m.streamUrl}', this)" class="py-1.5 px-2.5 rounded-lg bg-[#21262d] hover:bg-[#30363d] text-gray-300 hover:text-white text-xs font-semibold transition" title="Copy stream URL">
               Copy
             </button>
           </div>
-        </div>
-      \`).join('');
+        </div>`;
+      }).join('');
     }
 
     function playInline(url, title) {

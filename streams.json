@@ -1,7 +1,7 @@
 {
   "success": true,
-  "count": 22,
-  "updatedAt": "2026-11-20T12:47:41.092Z",
+  "count": 19,
+  "updatedAt": "2026-11-20T13:53:41.346Z",
   "streams": [
     {
       "matchName": "Otago Volts v Canterbury Kings",
@@ -11,15 +11,6 @@
       "matchId": "20666233",
       "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20666233",
       "exchangeEventId": 36313440
-    },
-    {
-      "matchName": "Pakistan A v United Arab Emirates",
-      "competition": "One Day Matches",
-      "sport": "Cricket",
-      "icon": "🏏",
-      "matchId": "20665947",
-      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20665947",
-      "exchangeEventId": 36320179
     },
     {
       "matchName": "Zimbabwe A v Ireland A",
@@ -49,15 +40,6 @@
       "exchangeEventId": -11248215
     },
     {
-      "matchName": "Pakistan W v Ireland W",
-      "competition": "ICC Women's Emerging Nations Trophy",
-      "sport": "Cricket",
-      "icon": "🏏",
-      "matchId": "20664581",
-      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20664581",
-      "exchangeEventId": 36335680
-    },
-    {
       "matchName": "India A v Nepal",
       "competition": "One Day Matches",
       "sport": "Cricket",
@@ -65,33 +47,6 @@
       "matchId": "20664319",
       "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20664319",
       "exchangeEventId": 36320180
-    },
-    {
-      "matchName": "Muscat Shaheens Women v Ghubra Giants Women",
-      "competition": "Oman D20 League Women",
-      "sport": "Cricket",
-      "icon": "🏏",
-      "matchId": "20669021",
-      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20669021",
-      "exchangeEventId": -11248764
-    },
-    {
-      "matchName": "FC Van Yerevan v Ararat Armenia",
-      "competition": "Armenian Premier League",
-      "sport": "Soccer",
-      "icon": "⚽",
-      "matchId": "20653516",
-      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20653516",
-      "exchangeEventId": 36337918
-    },
-    {
-      "matchName": "Milan Icons v Brescia Lions",
-      "competition": "Italia T10",
-      "sport": "Cricket",
-      "icon": "🏏",
-      "matchId": "20669073",
-      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20669073",
-      "exchangeEventId": 36339570
     },
     {
       "matchName": "Himachal Pradesh v Puducherry",
@@ -119,33 +74,6 @@
       "matchId": "20665951",
       "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20665951",
       "exchangeEventId": 36334587
-    },
-    {
-      "matchName": "FC Jurong v Balestier Khalsa",
-      "competition": "Singapore Premier League",
-      "sport": "Soccer",
-      "icon": "⚽",
-      "matchId": "20666616",
-      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20666616",
-      "exchangeEventId": 36337678
-    },
-    {
-      "matchName": "Sv Gulin v To Samuel",
-      "competition": "Helsinki Challenger 2026",
-      "sport": "Tennis",
-      "icon": "🎾",
-      "matchId": "20664816",
-      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20664816",
-      "exchangeEventId": 36335353
-    },
-    {
-      "matchName": "Budkov Kjaer v Djere",
-      "competition": "Helsinki Challenger 2026",
-      "sport": "Tennis",
-      "icon": "🎾",
-      "matchId": "20665199",
-      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20665199",
-      "exchangeEventId": 36335782
     },
     {
       "matchName": "Dewa United FC v Persita Tangerang",
@@ -200,6 +128,51 @@
       "matchId": "20666286",
       "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20666286",
       "exchangeEventId": 36338356
+    },
+    {
+      "matchName": "S Kwon v Prizmic",
+      "competition": "Metz Challenger 2026",
+      "sport": "Tennis",
+      "icon": "🎾",
+      "matchId": "20668322",
+      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20668322",
+      "exchangeEventId": 36338994
+    },
+    {
+      "matchName": "Carlos Alcaraz v Cobolli",
+      "competition": "ATP Finals Turin 2026",
+      "sport": "Tennis",
+      "icon": "🎾",
+      "matchId": "20665339",
+      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20665339",
+      "exchangeEventId": 36313140
+    },
+    {
+      "matchName": "Roma Gladiators v Napoli Knights",
+      "competition": "Italia T10",
+      "sport": "Cricket",
+      "icon": "🏏",
+      "matchId": "20669074",
+      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20669074",
+      "exchangeEventId": 36339571
+    },
+    {
+      "matchName": "Butvilas v Nish Basavareddy",
+      "competition": "Helsinki Challenger 2026",
+      "sport": "Tennis",
+      "icon": "🎾",
+      "matchId": "20668323",
+      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20668323",
+      "exchangeEventId": 36339374
+    },
+    {
+      "matchName": "Arabian Aces v UAE Bulls",
+      "competition": "Abu Dhabi T10",
+      "sport": "Cricket",
+      "icon": "🏏",
+      "matchId": "20668416",
+      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20668416",
+      "exchangeEventId": 36340126
     }
   ]
 }
