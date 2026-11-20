@@ -1,7 +1,7 @@
 {
   "success": true,
-  "count": 19,
-  "updatedAt": "2026-11-20T13:53:41.346Z",
+  "count": 16,
+  "updatedAt": "2026-11-20T16:29:37.137Z",
   "streams": [
     {
       "matchName": "Otago Volts v Canterbury Kings",
@@ -11,15 +11,6 @@
       "matchId": "20666233",
       "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20666233",
       "exchangeEventId": 36313440
-    },
-    {
-      "matchName": "Zimbabwe A v Ireland A",
-      "competition": "One Day Matches",
-      "sport": "Cricket",
-      "icon": "🏏",
-      "matchId": "20664632",
-      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20664632",
-      "exchangeEventId": 36335266
     },
     {
       "matchName": "North West Dragons v Imperial Lions",
@@ -40,139 +31,121 @@
       "exchangeEventId": -11248215
     },
     {
-      "matchName": "India A v Nepal",
-      "competition": "One Day Matches",
+      "matchName": "FK Sumqayit v FC Sabah",
+      "competition": "Azerbaijan Premier League",
+      "sport": "Soccer",
+      "icon": "⚽",
+      "matchId": "20662926",
+      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20662926",
+      "exchangeEventId": 36336211
+    },
+    {
+      "matchName": "KS Skenderbeu Korce v Egnatia Rrogozhine",
+      "competition": "Albanian Superliga",
+      "sport": "Soccer",
+      "icon": "⚽",
+      "matchId": "20665830",
+      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20665830",
+      "exchangeEventId": 36340613
+    },
+    {
+      "matchName": "FC Shirak v FC Gandzasar",
+      "competition": "Armenian Premier League",
+      "sport": "Soccer",
+      "icon": "⚽",
+      "matchId": "20663676",
+      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20663676",
+      "exchangeEventId": 36339396
+    },
+    {
+      "matchName": "Wadi Kabir Royals Women v OCA Invincibles Women",
+      "competition": "Oman D20 League Women",
       "sport": "Cricket",
       "icon": "🏏",
-      "matchId": "20664319",
-      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20664319",
-      "exchangeEventId": 36320180
+      "matchId": "20669022",
+      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20669022",
+      "exchangeEventId": -11248868
     },
     {
-      "matchName": "Himachal Pradesh v Puducherry",
-      "competition": "Syed Mushtaq Ali Trophy",
-      "sport": "Cricket",
-      "icon": "🏏",
-      "matchId": "20665948",
-      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20665948",
-      "exchangeEventId": 36334517
-    },
-    {
-      "matchName": "Rajasthan v Baroda",
-      "competition": "Syed Mushtaq Ali Trophy",
-      "sport": "Cricket",
-      "icon": "🏏",
-      "matchId": "20665949",
-      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20665949",
-      "exchangeEventId": 36335517
-    },
-    {
-      "matchName": "Railways v Haryana",
-      "competition": "Syed Mushtaq Ali Trophy",
-      "sport": "Cricket",
-      "icon": "🏏",
-      "matchId": "20665951",
-      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20665951",
-      "exchangeEventId": 36334587
-    },
-    {
-      "matchName": "Dewa United FC v Persita Tangerang",
-      "competition": "Indonesian Super League",
+      "matchName": "Botosani v FC Voluntari",
+      "competition": "Romanian Liga I",
       "sport": "Soccer",
       "icon": "⚽",
-      "matchId": "20648766",
-      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20648766",
-      "exchangeEventId": 36315291
+      "matchId": "20652354",
+      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20652354",
+      "exchangeEventId": 36328213
     },
     {
-      "matchName": "Police Tero v Chanthaburi FC",
-      "competition": "Thai League 2",
-      "sport": "Soccer",
-      "icon": "⚽",
-      "matchId": "20664143",
-      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20664143",
-      "exchangeEventId": 36338292
-    },
-    {
-      "matchName": "Al Hikma v Shabab Sahel",
-      "competition": "Lebanese Premier League",
-      "sport": "Soccer",
-      "icon": "⚽",
-      "matchId": "20662923",
-      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20662923",
-      "exchangeEventId": 36340348
-    },
-    {
-      "matchName": "Viettel FC v Song Lam Nghe An",
-      "competition": "Vietnamese V-League",
-      "sport": "Soccer",
-      "icon": "⚽",
-      "matchId": "20664259",
-      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20664259",
-      "exchangeEventId": 36338336
-    },
-    {
-      "matchName": "Bihor Oradea v CS Gloria 2018 Bistrita-Nasaud",
-      "competition": "Romanian Liga II",
-      "sport": "Soccer",
-      "icon": "⚽",
-      "matchId": "20652356",
-      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20652356",
-      "exchangeEventId": 36338358
-    },
-    {
-      "matchName": "Saint George FC v Hadiah Hosanna FC",
-      "competition": "Ethiopian Premier League",
-      "sport": "Soccer",
-      "icon": "⚽",
-      "matchId": "20666286",
-      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20666286",
-      "exchangeEventId": 36338356
-    },
-    {
-      "matchName": "S Kwon v Prizmic",
-      "competition": "Metz Challenger 2026",
-      "sport": "Tennis",
-      "icon": "🎾",
-      "matchId": "20668322",
-      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20668322",
-      "exchangeEventId": 36338994
-    },
-    {
-      "matchName": "Carlos Alcaraz v Cobolli",
-      "competition": "ATP Finals Turin 2026",
-      "sport": "Tennis",
-      "icon": "🎾",
-      "matchId": "20665339",
-      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20665339",
-      "exchangeEventId": 36313140
-    },
-    {
-      "matchName": "Roma Gladiators v Napoli Knights",
-      "competition": "Italia T10",
-      "sport": "Cricket",
-      "icon": "🏏",
-      "matchId": "20669074",
-      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20669074",
-      "exchangeEventId": 36339571
-    },
-    {
-      "matchName": "Butvilas v Nish Basavareddy",
+      "matchName": "Svrcina v Ot Virtanen",
       "competition": "Helsinki Challenger 2026",
       "sport": "Tennis",
       "icon": "🎾",
-      "matchId": "20668323",
-      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20668323",
-      "exchangeEventId": 36339374
+      "matchId": "20668717",
+      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20668717",
+      "exchangeEventId": 36340073
     },
     {
-      "matchName": "Arabian Aces v UAE Bulls",
+      "matchName": "Yas Lions v UAE Bulls",
       "competition": "Abu Dhabi T10",
       "sport": "Cricket",
       "icon": "🏏",
-      "matchId": "20668416",
-      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20668416",
-      "exchangeEventId": 36340126
+      "matchId": "20671691",
+      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20671691",
+      "exchangeEventId": 36342798
+    },
+    {
+      "matchName": "Prishtina v Drenica Skenderaj",
+      "competition": "Kosovan Superliga",
+      "sport": "Soccer",
+      "icon": "⚽",
+      "matchId": "20667577",
+      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20667577",
+      "exchangeEventId": 36340656
+    },
+    {
+      "matchName": "Al Wehdat v Al Arabi (Jor)",
+      "competition": "Jordanian Cup",
+      "sport": "Soccer",
+      "icon": "⚽",
+      "matchId": "20667029",
+      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20667029",
+      "exchangeEventId": 36340200
+    },
+    {
+      "matchName": "Septemvri v Lokomotiv Plovdiv",
+      "competition": "Bulgarian A League",
+      "sport": "Soccer",
+      "icon": "⚽",
+      "matchId": "20652329",
+      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20652329",
+      "exchangeEventId": 36320304
+    },
+    {
+      "matchName": "Dinamo Tbilisi v Torpedo Kutaisi",
+      "competition": "Georgian Umaglesi Liga",
+      "sport": "Soccer",
+      "icon": "⚽",
+      "matchId": "20654258",
+      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20654258",
+      "exchangeEventId": 36339534
+    },
+    {
+      "matchName": "MAS Taborsko v Slavia Praha B",
+      "competition": "Czech 2 Liga",
+      "sport": "Soccer",
+      "icon": "⚽",
+      "matchId": "20660167",
+      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20660167",
+      "exchangeEventId": 36339523
+    },
+    {
+      "matchName": "FK Proleter Zrenjanin v FK Borac Cacak",
+      "competition": "Serbian First League",
+      "sport": "Soccer",
+      "icon": "⚽",
+      "matchId": "20654261",
+      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20654261",
+      "exchangeEventId": 36339536
     }
   ]
 }
