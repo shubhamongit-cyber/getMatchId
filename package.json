@@ -1,0 +1,13 @@
+{
+  "name": "glive-stream-hub",
+  "version": "1.0.0",
+  "description": "24x7 Automated GLive Sports Stream Directory and API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "update": "node update-streams.js"
+  },
+  "keywords": ["sports", "streaming", "cricket", "football", "tennis", "glive"],
+  "author": "",
+  "license": "MIT"
+}
