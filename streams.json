@@ -1,7 +1,7 @@
 {
   "success": true,
-  "count": 16,
-  "updatedAt": "2026-11-20T16:39:10.535Z",
+  "count": 15,
+  "updatedAt": "2026-11-20T16:41:10.874Z",
   "streams": [
     {
       "matchName": "Otago Volts v Canterbury Kings",
@@ -56,15 +56,6 @@
       "matchId": "20663676",
       "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20663676",
       "exchangeEventId": 36339396
-    },
-    {
-      "matchName": "Wadi Kabir Royals Women v OCA Invincibles Women",
-      "competition": "Oman D20 League Women",
-      "sport": "Cricket",
-      "icon": "🏏",
-      "matchId": "20669022",
-      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20669022",
-      "exchangeEventId": -11248868
     },
     {
       "matchName": "Botosani v FC Voluntari",
