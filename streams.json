@@ -1,7 +1,7 @@
 {
   "success": true,
-  "count": 16,
-  "updatedAt": "2026-11-20T16:49:10.476Z",
+  "count": 15,
+  "updatedAt": "2026-11-20T16:51:10.587Z",
   "streams": [
     {
       "matchName": "Otago Volts v Canterbury Kings",
@@ -29,15 +29,6 @@
       "matchId": "20665603",
       "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20665603",
       "exchangeEventId": -11248215
-    },
-    {
-      "matchName": "FK Sumqayit v FC Sabah",
-      "competition": "Azerbaijan Premier League",
-      "sport": "Soccer",
-      "icon": "⚽",
-      "matchId": "20662926",
-      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20662926",
-      "exchangeEventId": 36336211
     },
     {
       "matchName": "KS Skenderbeu Korce v Egnatia Rrogozhine",
