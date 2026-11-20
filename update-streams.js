@@ -65,3 +65,4 @@ function fetchStreams() {
     process.exit(1);
   }
 })();
+
