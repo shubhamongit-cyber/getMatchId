@@ -1,7 +1,7 @@
 {
   "success": true,
   "count": 6,
-  "updatedAt": "2026-11-21T00:54:42.784Z",
+  "updatedAt": "2026-11-21T00:56:42.554Z",
   "streams": [
     {
       "matchName": "Otago Volts v Canterbury Kings",
@@ -11,15 +11,6 @@
       "matchId": "20666233",
       "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20666233",
       "exchangeEventId": 36313440
-    },
-    {
-      "matchName": "Velez Sarsfield v Belgrano",
-      "competition": "Argentinian Primera Division",
-      "sport": "Soccer",
-      "icon": "⚽",
-      "matchId": "20652325",
-      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20652325",
-      "exchangeEventId": 36322028
     },
     {
       "matchName": "Gu Justo v Roncadelli",
@@ -56,6 +47,15 @@
       "matchId": "20656387",
       "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20656387",
       "exchangeEventId": 36331347
+    },
+    {
+      "matchName": "Hobart Hurricanes W v Sydney Thunder W",
+      "competition": "WBBL",
+      "sport": "Cricket",
+      "icon": "🏏",
+      "matchId": "20667139",
+      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20667139",
+      "exchangeEventId": 36337770
     }
   ]
 }
