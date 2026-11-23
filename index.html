@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>24x7 Live Sports Streams - GLive Directory</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body { background-color: #0d1117; color: #c9d1d9; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body {
+      background-color: #0d1117;
+      color: #c9d1d9;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
   </style>
 </head>
+
 <body class="min-h-screen p-3 md:p-6 flex flex-col items-center">
   <div class="w-full max-w-4xl space-y-4">
-    
+
     <!-- Top Header -->
-    <header class="bg-[#161b22] border border-[#30363d] rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg">
+    <header
+      class="bg-[#161b22] border border-[#30363d] rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg">
       <div class="flex items-center gap-3">
         <span class="relative flex h-3 w-3">
           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
@@ -25,10 +32,12 @@
         </div>
       </div>
       <div class="flex items-center gap-2">
-        <button id="refreshBtn" onclick="loadStreams()" class="px-3 py-1.5 bg-[#21262d] hover:bg-[#30363d] border border-[#30363d] text-white rounded-lg text-xs font-semibold flex items-center gap-1.5 transition">
+        <button id="refreshBtn" onclick="loadStreams()"
+          class="px-3 py-1.5 bg-[#21262d] hover:bg-[#30363d] border border-[#30363d] text-white rounded-lg text-xs font-semibold flex items-center gap-1.5 transition">
           <span id="spinner" class="inline-block">🔄</span> Refresh
         </button>
-        <a href="streams.json" target="_blank" class="px-3 py-1.5 bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 border border-blue-500/30 rounded-lg text-xs font-semibold transition">
+        <a href="streams.json" target="_blank"
+          class="px-3 py-1.5 bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 border border-blue-500/30 rounded-lg text-xs font-semibold transition">
           JSON Data
         </a>
       </div>
@@ -37,19 +46,29 @@
     <!-- Filters & Search -->
     <div class="flex flex-col sm:flex-row gap-2 items-center justify-between">
       <div class="flex gap-1.5 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0" id="sportFilters">
-        <button onclick="setSport('ALL')" class="sport-btn active px-3 py-1 rounded-lg text-xs font-semibold bg-blue-600 text-white" data-sport="ALL">All (<span id="allCount">0</span>)</button>
-        <button onclick="setSport('Cricket')" class="sport-btn px-3 py-1 rounded-lg text-xs font-semibold bg-[#21262d] text-gray-300 hover:text-white" data-sport="Cricket">🏏 Cricket</button>
-        <button onclick="setSport('Tennis')" class="sport-btn px-3 py-1 rounded-lg text-xs font-semibold bg-[#21262d] text-gray-300 hover:text-white" data-sport="Tennis">🎾 Tennis</button>
-        <button onclick="setSport('Soccer')" class="sport-btn px-3 py-1 rounded-lg text-xs font-semibold bg-[#21262d] text-gray-300 hover:text-white" data-sport="Soccer">⚽ Soccer</button>
+        <button onclick="setSport('ALL')"
+          class="sport-btn active px-3 py-1 rounded-lg text-xs font-semibold bg-blue-600 text-white"
+          data-sport="ALL">All (<span id="allCount">0</span>)</button>
+        <button onclick="setSport('Cricket')"
+          class="sport-btn px-3 py-1 rounded-lg text-xs font-semibold bg-[#21262d] text-gray-300 hover:text-white"
+          data-sport="Cricket">🏏 Cricket</button>
+        <button onclick="setSport('Tennis')"
+          class="sport-btn px-3 py-1 rounded-lg text-xs font-semibold bg-[#21262d] text-gray-300 hover:text-white"
+          data-sport="Tennis">🎾 Tennis</button>
+        <button onclick="setSport('Soccer')"
+          class="sport-btn px-3 py-1 rounded-lg text-xs font-semibold bg-[#21262d] text-gray-300 hover:text-white"
+          data-sport="Soccer">⚽ Soccer</button>
       </div>
-      <input id="searchInput" type="text" placeholder="Search match name or ID..." oninput="filterMatches()" class="w-full sm:w-64 px-3 py-1.5 bg-[#161b22] border border-[#30363d] rounded-lg text-xs text-white placeholder-gray-500 focus:outline-none focus:border-blue-500">
+      <input id="searchInput" type="text" placeholder="Search match name or ID..." oninput="filterMatches()"
+        class="w-full sm:w-64 px-3 py-1.5 bg-[#161b22] border border-[#30363d] rounded-lg text-xs text-white placeholder-gray-500 focus:outline-none focus:border-blue-500">
     </div>
 
     <!-- Active Embedded Video Player -->
     <div id="playerSection" class="hidden bg-[#161b22] border border-blue-500/50 rounded-xl p-3 space-y-2 shadow-xl">
       <div class="flex items-center justify-between">
         <span id="playingTitle" class="text-xs font-semibold text-white truncate">Live Stream Preview</span>
-        <button onclick="closePlayer()" class="text-xs text-gray-400 hover:text-white px-2 py-0.5 rounded bg-[#21262d]">✕ Close</button>
+        <button onclick="closePlayer()"
+          class="text-xs text-gray-400 hover:text-white px-2 py-0.5 rounded bg-[#21262d]">✕ Close</button>
       </div>
       <div class="relative w-full aspect-video rounded-lg overflow-hidden bg-black">
         <iframe id="streamFrame" class="w-full h-full border-0" allow="autoplay; fullscreen" allowfullscreen></iframe>
@@ -62,7 +81,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="pt-4 text-center text-xs text-gray-500 flex flex-col sm:flex-row items-center justify-between gap-2 border-t border-[#21262d]">
+    <footer
+      class="pt-4 text-center text-xs text-gray-500 flex flex-col sm:flex-row items-center justify-between gap-2 border-t border-[#21262d]">
       <span>Hosted on GitHub &bull; Auto-updating 24x7</span>
       <span id="lastUpdated" class="text-gray-400">Updated: Just now</span>
     </footer>
@@ -76,7 +96,7 @@
     // ✅ Set your Cloudflare Worker URL here for live refresh on every page load.
     // Leave empty ('') to use the cached streams.json (updated every 5 min by GitHub Actions).
     // Example: 'https://getmatchid.YOUR-SUBDOMAIN.workers.dev/api/streams'
-    const LIVE_API_URL = '';
+    const LIVE_API_URL = 'https://hobo2323.hobo2323.workers.dev/api/streams';
 
     async function loadStreams() {
       const spinner = document.getElementById('spinner');
@@ -199,4 +219,5 @@
     setInterval(loadStreams, 30000);
   </script>
 </body>
+
 </html>
