@@ -1,7 +1,7 @@
 {
   "success": true,
-  "count": 12,
-  "updatedAt": "2026-11-23T02:08:22.928Z",
+  "count": 10,
+  "updatedAt": "2026-11-23T02:49:27.568Z",
   "streams": [
     {
       "matchName": "New Zealand v India",
@@ -40,15 +40,6 @@
       "exchangeEventId": 36331252
     },
     {
-      "matchName": "Yun  Chung v Ichikawa",
-      "competition": "Yokohama Challenger 2026",
-      "sport": "Tennis",
-      "icon": "🎾",
-      "matchId": "20676659",
-      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20676659",
-      "exchangeEventId": 36350168
-    },
-    {
       "matchName": "Ry Matsuda v Takahashi",
       "competition": "Yokohama Challenger 2026",
       "sport": "Tennis",
@@ -58,15 +49,6 @@
       "exchangeEventId": 36350173
     },
     {
-      "matchName": "S D  Dev v Y Mochizuki",
-      "competition": "Yokohama Challenger 2026",
-      "sport": "Tennis",
-      "icon": "🎾",
-      "matchId": "20677340",
-      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20677340",
-      "exchangeEventId": 36350214
-    },
-    {
       "matchName": "Queretaro v Necaxa",
       "competition": "Mexican Liga MX",
       "sport": "Soccer",
@@ -74,15 +56,6 @@
       "matchId": "20657770",
       "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20657770",
       "exchangeEventId": 36329636
-    },
-    {
-      "matchName": "Ha Satara v Ste Vujic",
-      "competition": "Playford City Challenger 2026",
-      "sport": "Tennis",
-      "icon": "🎾",
-      "matchId": "20677344",
-      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20677344",
-      "exchangeEventId": 36350324
     },
     {
       "matchName": "Vancouver Whitecaps v Real Salt Lake",
@@ -110,6 +83,15 @@
       "matchId": "20676799",
       "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20676799",
       "exchangeEventId": 36350512
+    },
+    {
+      "matchName": "Western Australia v Tasmania Tigers",
+      "competition": "Sheffield Shield",
+      "sport": "Cricket",
+      "icon": "🏏",
+      "matchId": "20676409",
+      "streamUrl": "https://glive.skyexchange.bet/stream?matchId=20676409",
+      "exchangeEventId": 36336225
     }
   ]
 }
