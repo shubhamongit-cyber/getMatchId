@@ -73,14 +73,30 @@
     let allStreams = [];
     let currentSport = 'ALL';
 
+    // ✅ Set your Cloudflare Worker URL here for live refresh on every page load.
+    // Leave empty ('') to use the cached streams.json (updated every 5 min by GitHub Actions).
+    // Example: 'https://getmatchid.YOUR-SUBDOMAIN.workers.dev/api/streams'
+    const LIVE_API_URL = '';
+
     async function loadStreams() {
       const spinner = document.getElementById('spinner');
       if (spinner) spinner.classList.add('animate-spin');
 
       try {
-        const res = await fetch('streams.json?t=' + Date.now());
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        const data = await res.json();
+        let data;
+
+        if (LIVE_API_URL) {
+          // Live mode: fetch directly from Cloudflare Worker (real-time, no cache)
+          const res = await fetch(LIVE_API_URL);
+          if (!res.ok) throw new Error('Worker HTTP ' + res.status);
+          data = await res.json();
+        } else {
+          // Static mode: load from pre-built streams.json (GitHub Actions updates every 5 min)
+          const res = await fetch('streams.json?t=' + Date.now());
+          if (!res.ok) throw new Error('HTTP ' + res.status);
+          data = await res.json();
+        }
+
         allStreams = data.streams || [];
         document.getElementById('allCount').innerText = allStreams.length;
         document.getElementById('lastUpdated').innerText = 'Updated: ' + new Date(data.updatedAt || Date.now()).toLocaleTimeString();
@@ -179,6 +195,7 @@
     }
 
     loadStreams();
+    // Auto-refresh every 30s (also live if LIVE_API_URL is set)
     setInterval(loadStreams, 30000);
   </script>
 </body>
