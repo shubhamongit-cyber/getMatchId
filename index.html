@@ -93,25 +93,38 @@
     let allStreams = [];
     let currentSport = 'ALL';
 
-    // ✅ Set your Cloudflare Worker URL here for live refresh on every page load.
-    // Leave empty ('') to use the cached streams.json (updated every 5 min by GitHub Actions).
-    // Example: 'https://getmatchid.YOUR-SUBDOMAIN.workers.dev/api/streams'
-    const LIVE_API_URL = 'https://hobo2323.hobo2323.workers.dev/api/streams';
+    // Data source strategy:
+    // 1. Try local server (http://localhost:3888/api/streams) if running for 100% live data on refresh.
+    // 2. Always fallback to streams.json (updated by GitHub Actions) so the page never fails.
+    const LOCAL_API_URL = 'http://localhost:3888/api/streams';
 
     async function loadStreams() {
       const spinner = document.getElementById('spinner');
       if (spinner) spinner.classList.add('animate-spin');
 
       try {
-        let data;
+        let data = null;
+        let isLive = false;
 
-        if (LIVE_API_URL) {
-          // Live mode: fetch directly from Cloudflare Worker (real-time, no cache)
-          const res = await fetch(LIVE_API_URL);
-          if (!res.ok) throw new Error('Worker HTTP ' + res.status);
-          data = await res.json();
-        } else {
-          // Static mode: load from pre-built streams.json (GitHub Actions updates every 5 min)
+        // Attempt 1: Try local live server with a 1.5s timeout
+        try {
+          const controller = new AbortController();
+          const timer = setTimeout(() => controller.abort(), 1500);
+          const localRes = await fetch(LOCAL_API_URL, { signal: controller.signal });
+          clearTimeout(timer);
+          if (localRes.ok) {
+            const json = await localRes.json();
+            if (json && json.success && Array.isArray(json.streams)) {
+              data = json;
+              isLive = true;
+            }
+          }
+        } catch (e) {
+          // Local server not running or unreachable, continue to fallback
+        }
+
+        // Attempt 2: Fallback to static streams.json from GitHub Pages
+        if (!data) {
           const res = await fetch('streams.json?t=' + Date.now());
           if (!res.ok) throw new Error('HTTP ' + res.status);
           data = await res.json();
@@ -119,7 +132,8 @@
 
         allStreams = data.streams || [];
         document.getElementById('allCount').innerText = allStreams.length;
-        document.getElementById('lastUpdated').innerText = 'Updated: ' + new Date(data.updatedAt || Date.now()).toLocaleTimeString();
+        const timeStr = new Date(data.updatedAt || Date.now()).toLocaleTimeString();
+        document.getElementById('lastUpdated').innerText = (isLive ? '⚡ Live: ' : 'Updated: ') + timeStr;
         filterMatches();
       } catch (err) {
         console.error('Failed to load streams:', err);
